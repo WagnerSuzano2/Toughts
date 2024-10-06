@@ -1,0 +1,35 @@
+{
+  "name": "Toughts",
+  "version": "1.0.0",
+  "description": "Toughts is a web application built with Node.js and the Express framework, following the MVC (Model-View-Controller) architectural pattern. The goal of the project is to create a community network where users can register, log in, publish thoughts, comment, and interact with other users. The application includes an advanced search system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WagnerSuzano2/Toughts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WagnerSuzano2/Toughts/issues"
+  },
+  "homepage": "https://github.com/WagnerSuzano2/Toughts#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.0",
+    "nodemon": "^2.0.12",
+    "sequelize": "^6.6.5",
+    "session-file-store": "^1.5.0"
+  }
+}
