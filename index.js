@@ -8,6 +8,17 @@ const app = express();
 
 const conn = require("./db/conn");
 
+// Models
+const Tought = require("./models/Tought");
+const User = require("./models/User");
+
+// routes
+const toughtsRoutes = require("./routes/toughtsRoutes");
+
+//import Controller
+const ToughController = require("./controllers/ToughtController");
+
+//  template engine
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
@@ -57,8 +68,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/toughts", toughtsRoutes);
+app.get("/", ToughController.showToughts);
+
 conn
-  .sync()
+  .sync({ force: true })
   .then(() => {
     app.listen(3000);
   })
